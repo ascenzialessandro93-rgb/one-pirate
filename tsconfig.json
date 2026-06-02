@@ -8,7 +8,10 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
+    "moduleResolution": "NodeNext",
     "target": "esnext",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],

@@ -1,6 +1,7 @@
 {
   "name": "onepirate",
   "version": "1.0.0",
+  "type": "module",
   "description": "\"# one-pirate\"",
   "main": "index.js",
   "scripts": {

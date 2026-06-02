@@ -11,7 +11,7 @@ const gameServer = new Server({
   })
 });
 
-gameServer.define("pirate_room", GameRoom);
+gameServer.define("pirate_room", GameRoom as any);
 gameServer.listen(2567);
 
 console.log("Server OnePirate online sulla porta 2567!");

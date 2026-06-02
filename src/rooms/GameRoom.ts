@@ -1,7 +1,7 @@
 import { Room, Client } from "colyseus";
 import { MyState, Player } from "./schema/MyState.js";
 
-export class GameRoom extends Room<MyState> {
+export class GameRoom extends Room<MyState, any> {
     onCreate() {
         this.setState(new MyState());
 

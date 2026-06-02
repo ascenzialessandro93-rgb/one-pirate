@@ -1,15 +1,19 @@
 import { Room, Client } from "colyseus";
 import { MyState, Player } from "./schema/MyState.js";
 
-export class GameRoom extends Room<MyState, any> {
+export class GameRoom extends Room<MyState> {
     onCreate() {
         this.setState(new MyState());
 
-        // Esempio: Quando un giocatore si muove
+        // Gestione del messaggio "move"
         this.onMessage("move", (client, data) => {
             const player = this.state.players.get(client.sessionId);
-            player.x = data.x;
-            player.y = data.y;
+            
+            // Dobbiamo controllare che 'player' esista prima di modificarlo
+            if (player) {
+                player.x = data.x;
+                player.y = data.y;
+            }
         });
     }
 

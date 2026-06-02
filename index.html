@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OnePirate Test</title>
+    <script src="https://unpkg.com/colyseus.js@0.15.11/dist/colyseus.js"></script>
+</head>
+<body>
+    <h1>Stato Connessione: <span id="status">Tentativo...</span></h1>
+
+    <script>
+        // Sostituisci <IL-TUO-IP-AWS> con l'indirizzo IP del tuo server AWS
+        const host = "ws://56.228.33.120:2567";
+        const client = new Colyseus.Client(host);
+
+        async function connect() {
+            try {
+                // Proviamo a entrare nella stanza che abbiamo definito nel server
+                const room = await client.joinOrCreate("pirate_room");
+                
+                document.getElementById("status").innerText = "Connesso! 🎉";
+                console.log("Sei dentro la stanza:", room.roomId);
+                
+                // Ascoltiamo i cambiamenti dello stato
+                room.onStateChange((state) => {
+                    console.log("Stato del gioco aggiornato:", state);
+                });
+
+            } catch (e) {
+                document.getElementById("status").innerText = "Errore: " + e.message;
+                console.error("Connessione fallita:", e);
+            }
+        }
+
+        connect();
+    </script>
+</body>
+</html>

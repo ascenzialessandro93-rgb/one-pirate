@@ -1,7 +1,7 @@
 {
   "name": "onepirate",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "\"# one-pirate\"",
   "main": "index.js",
   "scripts": {
@@ -16,13 +16,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/ascenzialessandro93-rgb/one-pirate/issues"
   },
   "homepage": "https://github.com/ascenzialessandro93-rgb/one-pirate#readme",
   "dependencies": {
     "@colyseus/monitor": "^0.17.8",
+    "@colyseus/schema": "^4.0.26",
     "@colyseus/uwebsockets-transport": "^0.17.20",
     "colyseus": "^0.17.10",
     "express": "^5.2.1"

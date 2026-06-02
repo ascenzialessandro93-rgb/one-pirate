@@ -7,5 +7,5 @@ const gameServer = new Server({
   transport: new uWebSocketsTransport()
 });
 
-gameServer.listen(2567);
+gameServer.listen(2567, "0.0.0.0");
 console.log("Server OnePirate online sulla porta 2567!");

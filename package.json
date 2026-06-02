@@ -1,7 +1,7 @@
 {
   "name": "onepirate",
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module",
   "description": "\"# one-pirate\"",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "@colyseus/schema": "^4.0.26",
     "@colyseus/uwebsockets-transport": "^0.17.20",
     "colyseus": "^0.17.10",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "@colyseus/ws-transport": "^0.15.0"
   },
   "devDependencies": {
     "@types/node": "^25.9.1",

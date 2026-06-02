@@ -6,7 +6,7 @@ export class GameRoom extends (Room as any)<MyState> {
         this.setState(new MyState());
 
         // Gestione del messaggio "move"
-        this.onMessage("move", (client, data) => {
+        this.onMessage("move", (client: Client, data: any) => {
             const player = this.state.players.get(client.sessionId);
             
             // Dobbiamo controllare che 'player' esista prima di modificarlo

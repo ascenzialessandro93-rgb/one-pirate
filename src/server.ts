@@ -1,9 +1,9 @@
 import { Server } from "colyseus";
-import { WebSocketTransport } from "@colyseus/uwebsockets-transport";
+import { uWebSocketsTransport } from "@colyseus/uwebsockets-transport";
 import http from "http";
 
 const gameServer = new Server({
-  transport: new WebSocketTransport({
+  transport: new uWebSocketsTransport({ // Anche qui cambia il nome
     server: http.createServer()
   })
 });
